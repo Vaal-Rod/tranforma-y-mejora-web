@@ -10,6 +10,11 @@
   --color-secondary-light: #63b350;
   --color-secondary-tint: #eef7ec;
 
+  --color-accent: #6c4a9e;
+  --color-accent-dark: #52397a;
+  --color-accent-light: #8c6bc0;
+  --color-accent-tint: #f1ecf9;
+
   /* Neutros */
   --color-white: #ffffff;
   --color-bg-light: #f5f7f8;

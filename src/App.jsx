@@ -3,6 +3,7 @@ import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
 import AboutUs from "./components/sections/AboutUs";
 import Services from "./components/sections/Services";
+import Media from "./components/sections/Media";
 import WhyUs from "./components/sections/WhyUs";
 import Contact from "./components/sections/Contact";
 
@@ -14,6 +15,7 @@ function App() {
         <Hero />
         <AboutUs />
         <Services />
+        <Media />
         <WhyUs />
         <Contact />
       </main>

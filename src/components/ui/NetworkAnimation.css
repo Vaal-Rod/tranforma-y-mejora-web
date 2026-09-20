@@ -1,0 +1,50 @@
+.network-anim {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  background: linear-gradient(155deg, var(--color-primary-dark) 0%, var(--color-gray-dark) 60%, #241a33 100%);
+}
+
+.network-anim svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.network-anim__link {
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 6;
+  animation: network-flow 3s linear infinite;
+}
+
+.network-anim__node {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: network-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes network-flow {
+  to {
+    stroke-dashoffset: -60;
+  }
+}
+
+@keyframes network-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .network-anim__link,
+  .network-anim__node {
+    animation: none;
+  }
+}

@@ -26,6 +26,16 @@
   margin-bottom: var(--space-3);
 }
 
+.why-us__item:nth-child(3n + 2) .why-us__icon {
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary-dark);
+}
+
+.why-us__item:nth-child(3n + 3) .why-us__icon {
+  background-color: var(--color-accent-tint);
+  color: var(--color-accent-dark);
+}
+
 .why-us__item h3 {
   font-size: 1.05rem;
   margin-bottom: var(--space-1);

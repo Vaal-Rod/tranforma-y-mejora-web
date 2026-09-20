@@ -1,22 +1,21 @@
 // Datos de contacto y navegación centralizados.
-// Los campos marcados como [PLACEHOLDER] deben reemplazarse con la información oficial de la empresa.
+// Contenido de demostración para TecnologiaTest SAS (proyecto de práctica/demo).
 
 export const companyInfo = {
-  name: "Tranforma Y Mejora SAS",
+  name: "TecnologiaTest SAS",
   city: "Bogotá D.C., Colombia",
   country: "Colombia",
 };
 
 export const contactInfo = {
-  email: "[PLACEHOLDER: correo@tranformaymejora.com]",
-  phone: "[PLACEHOLDER: +57 XXX XXX XXXX]",
+  email: "contacto@tecnologiatest.com",
+  phone: "+57 601 745 3210",
   address: "Bogotá D.C., Colombia",
 };
 
-// Se completará cuando la empresa proporcione sus enlaces oficiales.
 export const socialLinks = [
-  // { label: "LinkedIn", url: "[PLACEHOLDER]" },
-  // { label: "Instagram", url: "[PLACEHOLDER]" },
+  { label: "LinkedIn", url: "#" },
+  { label: "Instagram", url: "#" },
 ];
 
 // Webhook de n8n que recibe los envíos del formulario de contacto.

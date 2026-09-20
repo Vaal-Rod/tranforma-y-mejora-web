@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="section section--alt contact">
+    <section id="contacto" className="section contact">
       <div className="container contact__grid">
         <FadeIn className="contact__info">
           <SectionTitle

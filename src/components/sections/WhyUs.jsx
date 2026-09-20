@@ -45,10 +45,10 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="section why-us">
+    <section className="section section--alt why-us">
       <div className="container">
         <SectionTitle
-          eyebrow="¿Por qué Tranforma Y Mejora?"
+          eyebrow="¿Por qué TecnologiaTest?"
           title="El aliado tecnológico que tu empresa necesita"
         />
 

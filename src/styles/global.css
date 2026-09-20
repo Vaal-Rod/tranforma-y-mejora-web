@@ -119,17 +119,6 @@ textarea {
   margin-bottom: var(--space-3);
 }
 
-.placeholder-tag {
-  display: inline-block;
-  font-style: italic;
-  font-size: 0.85em;
-  color: var(--color-gray);
-  background-color: var(--color-bg-alt);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 0.15em 0.6em;
-}
-
 /* Animación de entrada al hacer scroll */
 .fade-in-up {
   opacity: 0;
