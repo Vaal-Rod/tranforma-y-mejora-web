@@ -1,0 +1,50 @@
+:root {
+  /* Colores corporativos */
+  --color-primary: #1f6f8b;
+  --color-primary-dark: #164f63;
+  --color-primary-light: #2c8aab;
+  --color-primary-tint: #eaf3f6;
+
+  --color-secondary: #4e9a3d;
+  --color-secondary-dark: #3b7530;
+  --color-secondary-light: #63b350;
+  --color-secondary-tint: #eef7ec;
+
+  /* Neutros */
+  --color-white: #ffffff;
+  --color-bg-light: #f5f7f8;
+  --color-bg-alt: #eef2f3;
+  --color-border: #dde3e5;
+  --color-gray: #5c6b70;
+  --color-gray-dark: #2f3a3d;
+  --color-text: #1c2426;
+  --color-text-muted: #5c6b70;
+
+  /* Tipografía */
+  --font-heading: "Sora", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Espaciado */
+  --space-1: 0.4rem;
+  --space-2: 0.8rem;
+  --space-3: 1.2rem;
+  --space-4: 1.6rem;
+  --space-5: 2.4rem;
+  --space-6: 3.2rem;
+  --space-7: 4.8rem;
+  --space-8: 6.4rem;
+
+  /* Layout */
+  --container-width: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --header-height: 76px;
+
+  /* Sombras y transiciones */
+  --shadow-sm: 0 2px 8px rgba(28, 36, 38, 0.06);
+  --shadow-md: 0 8px 24px rgba(28, 36, 38, 0.1);
+  --shadow-lg: 0 16px 40px rgba(28, 36, 38, 0.14);
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.5s ease;
+}
