@@ -1,6 +1,7 @@
 import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
 import NetworkAnimation from "../ui/NetworkAnimation";
+import connectivityImage from "../../assets/tecnologia-conectividad.jpg";
 import "./Media.css";
 
 export default function Media() {
@@ -31,11 +32,11 @@ export default function Media() {
             </FadeIn>
             <FadeIn delay={200} className="media__image-wrapper">
               <img
-                src="https://loremflickr.com/500/380/data,analytics,dashboard/all?lock=104"
-                alt="Visualización de datos y pantallas de análisis (imagen de referencia)"
+                src={connectivityImage}
+                alt="Persona interactuando con íconos de conectividad y tecnología digital"
                 loading="lazy"
-                width="500"
-                height="380"
+                width="620"
+                height="413"
               />
             </FadeIn>
           </div>
