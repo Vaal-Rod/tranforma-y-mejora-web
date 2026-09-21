@@ -2,6 +2,7 @@ import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
 import NetworkAnimation from "../ui/NetworkAnimation";
 import connectivityImage from "../../assets/tecnologia-conectividad.jpg";
+import officeImage from "../../assets/oficina-equipos.jpg";
 import "./Media.css";
 
 export default function Media() {
@@ -23,8 +24,8 @@ export default function Media() {
           <div className="media__images">
             <FadeIn delay={100} className="media__image-wrapper">
               <img
-                src="https://loremflickr.com/500/380/office,coworking/all?lock=103"
-                alt="Equipo trabajando en oficina con equipos de tecnología (imagen de referencia)"
+                src={officeImage}
+                alt="Oficina de TecnologiaTest con equipos de cómputo y estaciones de trabajo"
                 loading="lazy"
                 width="500"
                 height="380"

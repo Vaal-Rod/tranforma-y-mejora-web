@@ -1,6 +1,7 @@
 import { HiOutlineArrowRight } from "react-icons/hi";
 import Button from "../ui/Button";
 import { companyInfo } from "../../data/config";
+import heroImage from "../../assets/equipo-consultoria.jpg";
 import "./Hero.css";
 
 export default function Hero() {
@@ -36,8 +37,8 @@ export default function Hero() {
 
         <div className="hero__media">
           <img
-            src="https://loremflickr.com/900/1000/technology,office,team/all?lock=101"
-            alt="Equipo de trabajo colaborando frente a pantallas con datos y tecnología (imagen de referencia)"
+            src={heroImage}
+            alt="Consultores de TecnologiaTest revisando un plan de trabajo con un cliente"
             loading="eager"
             width="900"
             height="1000"
