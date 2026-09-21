@@ -1,12 +1,9 @@
-import { HiOutlineArrowRight, HiOutlineBadgeCheck } from "react-icons/hi";
+import { HiOutlineArrowRight } from "react-icons/hi";
 import Button from "../ui/Button";
 import { companyInfo } from "../../data/config";
-import { useContactForm } from "../../hooks/useContactForm";
 import "./Hero.css";
 
 export default function Hero() {
-  const { form, status, handleChange, handleSubmit } = useContactForm();
-
   return (
     <section id="inicio" className="hero">
       <div className="hero__glow hero__glow--one" aria-hidden="true" />
@@ -32,83 +29,19 @@ export default function Hero() {
               Conoce nuestros servicios <HiOutlineArrowRight />
             </Button>
             <Button href="#contacto" variant="secondary">
-              Ver más formas de contacto
+              Contáctanos
             </Button>
-          </div>
-
-          <div className="hero__badge">
-            <HiOutlineBadgeCheck size={22} />
-            <span>+40 organizaciones ya confían en nosotros en Bogotá y Colombia</span>
           </div>
         </div>
 
-        <div className="hero__card">
-          <p className="eyebrow">Hablemos de tu proyecto</p>
-          <h2 className="hero__card-title">Agenda una reunión</h2>
-          <p className="hero__card-subtitle">
-            Cuéntanos qué necesita tu organización y te contactamos a la brevedad.
-          </p>
-
-          <form className="contact__form hero__card-form" onSubmit={handleSubmit} noValidate>
-            <div className="contact__field">
-              <label htmlFor="hero-name">Nombre</label>
-              <input
-                id="hero-name"
-                name="name"
-                type="text"
-                required
-                value={form.name}
-                onChange={handleChange}
-                autoComplete="name"
-              />
-            </div>
-
-            <div className="contact__field">
-              <label htmlFor="hero-email">Correo electrónico</label>
-              <input
-                id="hero-email"
-                name="email"
-                type="email"
-                required
-                value={form.email}
-                onChange={handleChange}
-                autoComplete="email"
-              />
-            </div>
-
-            <div className="contact__field">
-              <label htmlFor="hero-message">¿En qué te podemos ayudar?</label>
-              <textarea
-                id="hero-message"
-                name="message"
-                rows={3}
-                required
-                value={form.message}
-                onChange={handleChange}
-              />
-            </div>
-
-            <Button
-              type="submit"
-              variant="primary"
-              className="contact__submit hero__card-submit"
-              disabled={status === "sending"}
-            >
-              {status === "sending" ? "Enviando..." : "Solicitar información"}
-            </Button>
-
-            {status === "success" && (
-              <p className="contact__feedback" role="status">
-                Gracias, te contactaremos pronto.
-              </p>
-            )}
-
-            {status === "error" && (
-              <p className="contact__feedback contact__feedback--error" role="alert">
-                Ocurrió un error al enviar tu mensaje. Inténtalo de nuevo.
-              </p>
-            )}
-          </form>
+        <div className="hero__media">
+          <img
+            src="https://loremflickr.com/900/1000/technology,office,team/all?lock=101"
+            alt="Equipo de trabajo colaborando frente a pantallas con datos y tecnología (imagen de referencia)"
+            loading="eager"
+            width="900"
+            height="1000"
+          />
         </div>
       </div>
     </section>
