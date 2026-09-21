@@ -2,6 +2,7 @@ import { HiOutlineLocationMarker, HiOutlineOfficeBuilding } from "react-icons/hi
 import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
 import { companyInfo } from "../../data/config";
+import aboutImage from "../../assets/equipo-nosotros.jpg";
 import "./AboutUs.css";
 
 export default function AboutUs() {
@@ -39,8 +40,8 @@ export default function AboutUs() {
 
         <FadeIn delay={150} className="about__media">
           <img
-            src="https://loremflickr.com/700/560/business,meeting,technology/all?lock=102"
-            alt="Equipo de TecnologiaTest trabajando en soluciones tecnológicas (imagen de referencia)"
+            src={aboutImage}
+            alt="Equipo de TecnologiaTest analizando datos en una reunión de trabajo"
             loading="lazy"
             width="700"
             height="560"
