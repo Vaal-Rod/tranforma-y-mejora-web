@@ -5,6 +5,7 @@ import AboutUs from "./components/sections/AboutUs";
 import Services from "./components/sections/Services";
 import Media from "./components/sections/Media";
 import WhyUs from "./components/sections/WhyUs";
+import FAQ from "./components/sections/FAQ";
 import Contact from "./components/sections/Contact";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Services />
         <Media />
         <WhyUs />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
