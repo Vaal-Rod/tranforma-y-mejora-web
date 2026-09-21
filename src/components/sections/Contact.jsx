@@ -3,7 +3,7 @@ import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from "react-ic
 import Button from "../ui/Button";
 import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
-import { contactInfo, contactWebhookUrl } from "../../data/config";
+import { contactInfo, contactApiUrl } from "../../data/config";
 import "./Contact.css";
 
 const initialForm = { name: "", email: "", phone: "", message: "" };
@@ -22,17 +22,13 @@ export default function Contact() {
     setStatus("sending");
 
     try {
-      const response = await fetch(contactWebhookUrl, {
+      const response = await fetch(contactApiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          source: "tranforma-y-mejora-web",
-          submittedAt: new Date().toISOString(),
-        }),
+        body: JSON.stringify(form),
       });
 
-      if (!response.ok) throw new Error(`Webhook respondió ${response.status}`);
+      if (!response.ok) throw new Error(`La API respondió ${response.status}`);
 
       setStatus("success");
       setForm(initialForm);

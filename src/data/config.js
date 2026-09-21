@@ -18,9 +18,8 @@ export const socialLinks = [
   { label: "Instagram", url: "#" },
 ];
 
-// Webhook de n8n que recibe los envíos del formulario de contacto.
-export const contactWebhookUrl =
-  "https://val-16.app.n8n.cloud/webhook/cc3e9435-c3ac-47e9-b4c7-7225ff49922b";
+// Endpoint propio (FastAPI en Vercel Functions) que recibe los envíos del formulario de contacto.
+export const contactApiUrl = "/api/contact";
 
 export const navLinks = [
   { label: "Inicio", href: "#inicio" },
