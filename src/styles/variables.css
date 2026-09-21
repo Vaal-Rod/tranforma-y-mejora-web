@@ -1,29 +1,29 @@
 :root {
   /* Colores corporativos */
-  --color-primary: #1f6f8b;
-  --color-primary-dark: #164f63;
-  --color-primary-light: #2c8aab;
-  --color-primary-tint: #eaf3f6;
+  --color-primary: #012452; /* Azul marino oscuro: fondos y títulos */
+  --color-primary-dark: #01152f;
+  --color-primary-light: #0a3b73;
+  --color-primary-tint: #e7ecf2;
 
-  --color-secondary: #4e9a3d;
-  --color-secondary-dark: #3b7530;
-  --color-secondary-light: #63b350;
-  --color-secondary-tint: #eef7ec;
+  --color-secondary: #2ec971; /* Verde esmeralda: detalles y resaltar */
+  --color-secondary-dark: #24a85c;
+  --color-secondary-light: #5edda0;
+  --color-secondary-tint: #e6f9ee;
 
-  --color-accent: #6c4a9e;
-  --color-accent-dark: #52397a;
-  --color-accent-light: #8c6bc0;
-  --color-accent-tint: #f1ecf9;
+  --color-accent: #0f3d2e; /* Verde bosque oscuro: fondos */
+  --color-accent-dark: #0a2b20;
+  --color-accent-light: #1c5940;
+  --color-accent-tint: #e4ede9;
 
   /* Neutros */
   --color-white: #ffffff;
-  --color-bg-light: #f5f7f8;
-  --color-bg-alt: #eef2f3;
-  --color-border: #dde3e5;
+  --color-bg-light: #eff1f3; /* Gris claro: fondos y textos */
+  --color-bg-alt: #e3e6e9;
+  --color-border: #dadfe3;
   --color-gray: #5c6b70;
-  --color-gray-dark: #2f3a3d;
-  --color-text: #1c2426;
-  --color-text-muted: #5c6b70;
+  --color-gray-dark: #012452;
+  --color-text: #1a1a1a; /* Negro carbón: textos */
+  --color-text-muted: #4a5256;
 
   /* Tipografía */
   --font-heading: "Sora", "Inter", system-ui, sans-serif;

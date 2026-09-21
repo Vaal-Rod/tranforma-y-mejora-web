@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, #1a5a72 100%);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-accent-dark) 100%);
   overflow: hidden;
   isolation: isolate;
 }
@@ -30,7 +30,7 @@
 .hero__glow--one {
   width: 420px;
   height: 420px;
-  background: rgba(78, 154, 61, 0.45);
+  background: rgba(46, 201, 113, 0.4);
   top: -120px;
   right: -80px;
 }
@@ -47,7 +47,7 @@
 .hero__glow--three {
   width: 260px;
   height: 260px;
-  background: rgba(140, 107, 192, 0.4);
+  background: rgba(15, 61, 46, 0.55);
   top: 40%;
   left: 30%;
   animation-delay: 1.5s;
@@ -66,7 +66,7 @@
 .hero__layout {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
   gap: var(--space-6);
   padding-block: var(--space-8);
@@ -76,28 +76,6 @@
   position: relative;
   max-width: 620px;
   color: var(--color-white);
-}
-
-.hero__media {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  aspect-ratio: 9 / 10;
-}
-
-.hero__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero__media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(200deg, rgba(31, 111, 139, 0.15), rgba(108, 74, 158, 0.35));
 }
 
 .eyebrow--light {
@@ -130,6 +108,57 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: rgba(255, 255, 255, 0.94);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  box-shadow: var(--shadow-md);
+}
+
+.hero__badge svg {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+/* Tarjeta flotante con el formulario de agendamiento */
+.hero__card {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero__card-title {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  margin-bottom: var(--space-1);
+}
+
+.hero__card-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-4);
+}
+
+.hero__card .contact__form.hero__card-form {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  gap: var(--space-3);
+}
+
+.hero__card-submit {
+  width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -141,8 +170,7 @@
     max-width: none;
   }
 
-  .hero__media {
-    aspect-ratio: 16 / 10;
+  .hero__card {
     order: -1;
   }
 }

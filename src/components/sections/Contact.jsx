@@ -1,42 +1,13 @@
-import { useState } from "react";
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from "react-icons/hi";
 import Button from "../ui/Button";
 import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
-import { contactInfo, contactApiUrl } from "../../data/config";
+import { contactInfo } from "../../data/config";
+import { useContactForm } from "../../hooks/useContactForm";
 import "./Contact.css";
 
-const initialForm = { name: "", email: "", phone: "", message: "" };
-
 export default function Contact() {
-  const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setStatus("sending");
-
-    try {
-      const response = await fetch(contactApiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      if (!response.ok) throw new Error(`La API respondió ${response.status}`);
-
-      setStatus("success");
-      setForm(initialForm);
-    } catch (error) {
-      console.error("Error al enviar el formulario de contacto:", error);
-      setStatus("error");
-    }
-  };
+  const { form, status, handleChange, handleSubmit } = useContactForm();
 
   return (
     <section id="contacto" className="section contact">
