@@ -7,7 +7,7 @@ import patternLight from "../assets/patron-claro.jpg";
 import "./Contact.css";
 
 export default function Contact() {
-  const { form, status, handleChange, handleSubmit, reset } = useContactForm();
+  const { form, status, errorMessage, handleChange, handleSubmit, reset } = useContactForm();
 
   const field = (name, label, props = {}) => (
     <div className="contact-field">
@@ -73,6 +73,9 @@ export default function Contact() {
                   type: "email",
                   autoComplete: "email",
                   placeholder: "nombre@empresa.com",
+                  // Exige dominio con punto (la API rechaza "nombre@empresa")
+                  pattern: "[^@\\s]+@[^@\\s]+\\.[^@\\s]+",
+                  title: "Escriba un correo completo, por ejemplo nombre@empresa.com",
                 })}
               </div>
               {field("phone", "Teléfono", { type: "tel", autoComplete: "tel", placeholder: "+57" })}
@@ -116,7 +119,7 @@ export default function Contact() {
 
               {status === "error" && (
                 <p className="contact__error" role="alert">
-                  No pudimos enviar su solicitud. Por favor, inténtelo de nuevo en unos minutos.
+                  {errorMessage ?? "No pudimos enviar su solicitud. Por favor, inténtelo de nuevo en unos minutos."}
                 </p>
               )}
             </form>
