@@ -1,16 +1,33 @@
-# React + Vite
+# Transforma · sitio web
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Sitio de Transforma (mejora y tecnología) construido con React + Vite, a partir del mockup `mockup_sitio_web_transforma 3.html`.
 
-Currently, two official plugins are available:
+## Desarrollo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # genera dist/
+npm run lint
+```
 
-## React Compiler
+## Estructura
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/pages/` — una página por ruta: Inicio, Quiénes somos, Servicios, Oracle ERP Fusion, Sectores, Temas clave, Contáctanos y 404.
+- `src/data/` — todo el contenido editable: `config.js` (navegación, oferta de diagnóstico, política de datos), `services.js` (9 servicios) y `content.js` (valores, sectores, temas, textos de Oracle).
+- `src/components/layout/` — barra superior, header con megamenú de servicios, footer y botón fijo en celulares.
+- `src/components/ui/` — piezas reutilizables (botones, títulos de sección, banda CTA, etc.).
+- Rutas por hash (`#/servicios/analitica`) con `src/hooks/useHashRoute.js`, sin dependencias extra.
 
-## Expanding the Oxlint configuration
+## Formulario de contacto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+`src/pages/Contact.jsx` envía a `/api/contact` (`api/contact.py`, FastAPI en Vercel Functions), que guarda en Postgres (`DATABASE_URL`).
+La tabla está en `sql/schema.sql`; si la base ya existía con la versión anterior, ejecute las sentencias `ALTER TABLE` del mismo archivo.
+
+En `npm run dev` la API no está disponible (el formulario muestra el mensaje de error); para probarla use `vercel dev`.
+
+## Pendientes de contenido
+
+- `privacyPolicyUrl` en `src/data/config.js` (enlace a la política de tratamiento de datos).
+- Frases de los valores, retos por sector y resúmenes de los temas en `src/data/content.js` (marcados con `TODO`).
+- Cita de un cliente en la página de Oracle (Fase II).

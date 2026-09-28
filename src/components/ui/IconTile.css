@@ -1,0 +1,42 @@
+.icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+.icon-tile--sm {
+  width: 44px;
+  height: 44px;
+}
+
+.icon-tile--md {
+  width: 52px;
+  height: 52px;
+}
+
+.icon-tile--lg {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-tile--tint {
+  background-color: var(--color-secondary-tint);
+  color: var(--color-accent);
+}
+
+.icon-tile--navy {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.icon-tile--white {
+  background-color: var(--color-white);
+  color: var(--color-accent);
+}
+
+.icon-tile--green {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}

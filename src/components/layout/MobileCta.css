@@ -1,0 +1,24 @@
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobile-cta {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 90;
+  }
+
+  .mobile-cta .btn {
+    width: 100%;
+    box-shadow: 0 10px 24px rgba(1, 36, 82, 0.25);
+  }
+
+  /* Deja espacio para que el botón no tape el final del footer */
+  body:has(.mobile-cta) .footer {
+    padding-bottom: 96px;
+  }
+}

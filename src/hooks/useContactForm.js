@@ -1,21 +1,32 @@
 import { useState } from "react";
-import { contactApiUrl } from "../data/config";
+import { contactApiUrl, roleOptions } from "../data/config";
 
-const initialForm = { name: "", email: "", phone: "", message: "" };
+// Los nombres de los campos coinciden con el modelo de api/contact.py.
+const initialForm = {
+  name: "",
+  company: "",
+  role: roleOptions[0],
+  email: "",
+  phone: "",
+  message: "",
+  consent: false,
+};
 
 export function useContactForm() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type, checked } = event.target;
+    setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus("sending");
+    // Validación nativa del navegador (campos required, tipo email, casilla de autorización).
+    if (!event.currentTarget.reportValidity()) return;
 
+    setStatus("sending");
     try {
       const response = await fetch(contactApiUrl, {
         method: "POST",
@@ -33,5 +44,7 @@ export function useContactForm() {
     }
   };
 
-  return { form, status, handleChange, handleSubmit };
+  const reset = () => setStatus("idle");
+
+  return { form, status, handleChange, handleSubmit, reset };
 }

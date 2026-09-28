@@ -1,33 +1,29 @@
 :root {
-  /* Colores corporativos */
-  --color-primary: #012452; /* Azul marino oscuro: fondos y títulos */
-  --color-primary-dark: #01152f;
+  /* Colores corporativos (Brandbook Transforma 2026) */
+  --color-primary: #012452; /* Azul marino: fondos y títulos */
   --color-primary-light: #0a3b73;
-  --color-primary-tint: #e7ecf2;
-
-  --color-secondary: #2ec971; /* Verde esmeralda: detalles y resaltar */
+  --color-secondary: #2ec971; /* Verde esmeralda: acciones y detalles */
   --color-secondary-dark: #24a85c;
-  --color-secondary-light: #5edda0;
-  --color-secondary-tint: #e6f9ee;
-
-  --color-accent: #0f3d2e; /* Verde bosque oscuro: fondos */
-  --color-accent-dark: #0a2b20;
-  --color-accent-light: #1c5940;
-  --color-accent-tint: #e4ede9;
+  --color-secondary-tint: #e3f7ec;
+  --color-accent: #0f3d2e; /* Verde bosque: barra superior y etiquetas */
 
   /* Neutros */
   --color-white: #ffffff;
-  --color-bg-light: #eff1f3; /* Gris claro: fondos y textos */
-  --color-bg-alt: #e3e6e9;
-  --color-border: #dadfe3;
-  --color-gray: #5c6b70;
-  --color-gray-dark: #012452;
-  --color-text: #1a1a1a; /* Negro carbón: textos */
-  --color-text-muted: #4a5256;
+  --color-bg-light: #eff1f3;
+  --color-border: #dde2e8;
+  --color-border-strong: #c9d2dd;
+  --color-text: #1a1a1a;
+  --color-text-muted: #4a5563;
+  --color-on-dark: #d8e0ea;
+  --color-on-dark-muted: #b9c5d4;
 
   /* Tipografía */
-  --font-heading: "Sora", "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Poppins", Calibri, "Segoe UI", sans-serif;
+  --font-body: "Poppins", Calibri, "Segoe UI", sans-serif;
+  --fs-h1: clamp(2.1rem, 4.2vw, 3.375rem);
+  --fs-h1-page: clamp(1.9rem, 3.6vw, 3rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2.5rem);
+  --fs-lead: clamp(1.05rem, 1.4vw, 1.2rem);
 
   /* Espaciado */
   --space-1: 0.4rem;
@@ -37,19 +33,20 @@
   --space-5: 2.4rem;
   --space-6: 3.2rem;
   --space-7: 4.8rem;
-  --space-8: 6.4rem;
+  --space-8: 6rem;
 
   /* Layout */
   --container-width: 1200px;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
   --header-height: 76px;
+  --announce-height: 40px;
 
   /* Sombras y transiciones */
-  --shadow-sm: 0 2px 8px rgba(28, 36, 38, 0.06);
-  --shadow-md: 0 8px 24px rgba(28, 36, 38, 0.1);
-  --shadow-lg: 0 16px 40px rgba(28, 36, 38, 0.14);
+  --shadow-sm: 0 2px 8px rgba(1, 36, 82, 0.06);
+  --shadow-md: 0 20px 48px rgba(1, 36, 82, 0.16);
+  --shadow-lg: 0 24px 60px rgba(1, 36, 82, 0.18);
   --transition-base: 0.25s ease;
-  --transition-slow: 0.5s ease;
 }

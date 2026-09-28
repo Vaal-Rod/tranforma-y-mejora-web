@@ -1,10 +1,11 @@
 import "./SectionTitle.css";
 
-export default function SectionTitle({ eyebrow, title, description, align = "center" }) {
+// Título de sección con la barra verde de marca. as: nivel del encabezado (h2 por defecto).
+export default function SectionTitle({ title, description, align = "center", as: Tag = "h2" }) {
   return (
     <div className={`section-title section-title--${align}`}>
-      {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-      <h2>{title}</h2>
+      <span className="section-title__bar" aria-hidden="true" />
+      <Tag>{title}</Tag>
       {description && <p className="section-title__description">{description}</p>}
     </div>
   );

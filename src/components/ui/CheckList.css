@@ -1,0 +1,25 @@
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.check-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.check-list__mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-secondary-tint);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

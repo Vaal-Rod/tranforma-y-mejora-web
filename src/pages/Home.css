@@ -1,0 +1,298 @@
+/* Hero */
+.home-hero {
+  background-color: var(--color-bg-light);
+  padding: 72px 0 88px;
+  overflow: hidden;
+}
+
+.home-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 600px) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.home-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.home-hero__tag {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: var(--color-white);
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.home-hero h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.12;
+}
+
+.home-hero h1 em {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--color-secondary);
+  text-decoration-thickness: 6px;
+  text-underline-offset: 8px;
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.home-hero__media {
+  position: relative;
+  height: 500px;
+}
+
+.home-hero__photo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: min(520px, 100%);
+  height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+.home-hero__card {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 290px;
+  background-color: var(--color-white);
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-hero__card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.home-hero__pillar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9375rem;
+}
+
+.home-hero__pillar .home-hero__pillar-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.home-hero__pillar-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.home-hero__badge {
+  position: absolute;
+  right: 24px;
+  bottom: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 18px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.home-hero__badge svg {
+  color: var(--color-secondary);
+}
+
+/* Frase de marca */
+.home-claim blockquote {
+  position: relative;
+  max-width: 760px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.home-claim blockquote span {
+  color: var(--color-secondary);
+}
+
+.home-claim .brand-pattern {
+  opacity: 1;
+}
+
+/* Por qué elegirnos */
+.home-reasons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.home-reason {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.home-reason h3 {
+  font-size: 1.25rem;
+}
+
+.home-reason p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Pasos */
+.home-steps {
+  display: grid;
+  grid-template-columns: 520px minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.home-steps__photo {
+  height: 460px;
+}
+
+.home-steps__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: -16px;
+}
+
+.home-steps__list li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px 26px;
+}
+
+.home-steps__num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.home-steps__list h3 {
+  font-size: 1.1875rem;
+  margin-bottom: 6px;
+}
+
+.home-steps__list p {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1100px) {
+  .home-reasons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    padding: 40px 0 48px;
+  }
+
+  .home-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .home-hero__media {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .home-hero__photo {
+    position: static;
+    width: 100%;
+    height: 300px;
+    border-radius: var(--radius-lg);
+  }
+
+  .home-hero__card {
+    display: none;
+  }
+
+  .home-hero__badge {
+    position: static;
+    align-self: flex-start;
+  }
+
+  .home-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .home-steps__photo {
+    height: 260px;
+    order: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-hero__actions .btn {
+    width: 100%;
+  }
+
+  .home-reasons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home-reason {
+    padding: 22px 20px;
+    gap: 12px;
+  }
+
+  .home-steps__list li {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .home-steps__num {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,174 @@
+.oracle-hero {
+  padding: 64px 0 88px;
+}
+
+.oracle-hero .brand-pattern {
+  opacity: 1;
+}
+
+.oracle-hero__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.oracle-hero__inner > * {
+  max-width: 760px;
+}
+
+.oracle-hero__back {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.oracle-hero__back:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.oracle-hero h1 {
+  color: var(--color-white);
+  font-size: var(--fs-h1);
+  line-height: 1.15;
+}
+
+.oracle-hero .lead {
+  color: var(--color-on-dark);
+}
+
+.oracle-hero__cta {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.oracle-cycle {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.oracle-cycle li {
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-light);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.oracle-cycle h3 {
+  font-size: 1.3125rem;
+}
+
+.oracle-when {
+  padding-top: 0;
+}
+
+.oracle-quotes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.oracle-quotes blockquote {
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-secondary);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--color-secondary);
+}
+
+.oracle-quotes p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.oracle-benefits {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 64px;
+  align-items: center;
+}
+
+.oracle-benefits__photo {
+  height: 380px;
+}
+
+.oracle-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.oracle-related a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-primary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: border-color var(--transition-base);
+}
+
+.oracle-related a:hover {
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 1100px) {
+  .oracle-benefits {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .oracle-hero {
+    padding: 40px 0 56px;
+  }
+
+  .oracle-hero .brand-pattern {
+    right: -160px;
+    opacity: 0.35;
+  }
+
+  .oracle-cycle,
+  .oracle-quotes,
+  .oracle-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .oracle-cycle {
+    gap: 10px;
+  }
+
+  .oracle-cycle li,
+  .oracle-quotes blockquote {
+    padding: 20px;
+  }
+
+  .oracle-quotes p {
+    font-size: 1.0625rem;
+  }
+
+  .oracle-benefits__photo {
+    height: 220px;
+  }
+}

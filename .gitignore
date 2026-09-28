@@ -29,3 +29,6 @@ dist-ssr
 .venv
 __pycache__
 *.pyc
+
+# Configuración local de Claude Code
+.claude/
